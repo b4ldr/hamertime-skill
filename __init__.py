@@ -8,7 +8,7 @@ class Hamertime(MycroftSkill):
         mixer.init()
 
     def initialize(self):
-        self.mp3 = self.settings.get('mp3')
+        self.mp3 = self.settings.get('mp3', '/home/pi/hammer_time.mp3')
         mixer.music.load(self.mp3)
 
     @intent_file_handler('hamertime.intent')
